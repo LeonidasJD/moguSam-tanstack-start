@@ -5,5 +5,10 @@ export const Route = createFileRoute("/_protected/categories")({
 });
 
 function RouteComponent() {
-  return <Outlet />;
+  return (
+    <div>
+      SIDENAV
+      <Outlet />
+    </div>
+  );
 }

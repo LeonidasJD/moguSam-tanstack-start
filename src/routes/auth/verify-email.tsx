@@ -14,16 +14,16 @@ export const Route = createFileRoute("/auth/verify-email")({
   component: RouteComponent,
   validateSearch: verifyEmailSchema,
   loaderDeps: ({ search }) => ({ token: search.token }),
-  // loader: async ({ deps }) => {
-  //   try {
-  //     const { data } = await publicApi.post("/api/users/verify-email", {
-  //       token: deps.token,
-  //     });
-  //     return data;
-  //   } catch (error) {
-  //     throw new Error(getErrorMessage(error));
-  //   }
-  // },
+  loader: async ({ deps }) => {
+    try {
+      const { data } = await publicApi.post("/api/users/verify-email", {
+        token: deps.token,
+      });
+      return data;
+    } catch (error) {
+      throw new Error(getErrorMessage(error));
+    }
+  },
   errorComponent: ({ error }) => {
     return <VerifyEmailError error={error.message} />;
   },

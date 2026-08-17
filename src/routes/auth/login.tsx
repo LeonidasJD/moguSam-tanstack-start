@@ -13,6 +13,7 @@ import { loginSchema } from "./-types/authTypes";
 
 export const Route = createFileRoute("/auth/login")({
   component: RouteComponent,
+
   head: () => ({
     meta: [
       { title: "Prijavi se - MoguSam" },
