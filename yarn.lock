@@ -2116,6 +2116,7 @@ __metadata:
     lucide-react: "npm:^1.31.0"
     react: "npm:^19.2.8"
     react-dom: "npm:^19.2.8"
+    srvx: "npm:^0.12.5"
     tailwind-variants: "npm:^3.3.1"
     tailwindcss: "npm:^4.3.3"
     typescript: "npm:^7.0.2"
@@ -2421,6 +2422,15 @@ __metadata:
   bin:
     srvx: bin/srvx.mjs
   checksum: 10c0/aae81d7aa2d43e23fd483088533ad471ee2cd28f2065b84119635fd9feabdd4bab94fc06b8d198c205e3613b552624ccd2015c887ba9ca415d9c51dde7e6ec79
+  languageName: node
+  linkType: hard
+
+"srvx@npm:^0.12.5":
+  version: 0.12.5
+  resolution: "srvx@npm:0.12.5"
+  bin:
+    srvx: bin/srvx.mjs
+  checksum: 10c0/89d844b55c1858f567bb5dac8839d0a4d217fc25306c1c7caa4a6cc8236381812c3c84352d974ecfd5b655a690883c172f49d51b13f4181160a1da4e982ba792
   languageName: node
   linkType: hard
 
