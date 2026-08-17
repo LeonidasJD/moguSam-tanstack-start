@@ -7,10 +7,10 @@ const textVariants = tv({
   base: "",
   variants: {
     variant: {
-      heading: "text-2xl leading-none",
-      subheading: "text-xl leading-none",
-      paragraph: "text-base leading-none",
-      small: "text-sm leading-none",
+      heading: "text-xl md:text-2xl leading-none",
+      subheading: "text-lg md:text-xl leading-none",
+      paragraph: "text-sm md:text-base leading-none",
+      small: "text-xs md:text-sm leading-none",
     },
     color: {
       black: "text-black",

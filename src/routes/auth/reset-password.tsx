@@ -51,9 +51,9 @@ function RouteComponent() {
     },
   });
   return (
-    <section className="grid grid-cols-2">
+    <section className="grid grid-cols-1 md:grid-cols-2 md:gap-2 xl:gap-0 min-h-screen items-center">
       <div
-        className="bg-cover flex pl-25 pb-25 items-end bg-center h-screen"
+        className="bg-cover hidden md:flex md:px-2 md:pb-25 xl:pl-25 items-end bg-center h-screen"
         style={{ backgroundImage: `url(${forgotPasswordBg})` }}
       >
         <CreateAccountBanner
@@ -62,11 +62,11 @@ function RouteComponent() {
         />
       </div>
 
-      <div className="flex justify-center items-center">
-        <Card className="w-full py-10 px-15 max-w-xl border border-gold/30 flex flex-col gap-10">
+      <div className="flex justify-center px-2 md:py-0 items-center xl:px-0">
+        <Card className="w-full py-5 md:py-10 md:px-2 xl:px-15 max-w-xl border border-gold/30 flex flex-col gap-8 md:gap-10">
           <div className="flex flex-row justify-center items-center gap-2">
             <Text
-              className="text-3xl"
+              className="text-2xl md:text-3xl"
               weight="bold"
               color="gold"
               render={<span />}
@@ -78,7 +78,7 @@ function RouteComponent() {
           </div>
 
           {!successfullyResetPassword ? (
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-8 md:gap-10">
               <div className="flex flex-col gap-2">
                 <Text
                   variant="heading"

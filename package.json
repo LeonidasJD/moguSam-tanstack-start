@@ -6,7 +6,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "start": "srvx --prod -s dist/client dist/server/server.js"
+    "start": "srvx --prod -s ../client dist/server/server.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

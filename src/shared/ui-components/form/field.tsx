@@ -27,7 +27,7 @@ export const FieldControl = ({ className, ...props }: Field.Control.Props) => {
     <Field.Control
       {...props}
       className={cn(
-        "h-14 w-full rounded-xl border border-light-brown bg-white px-4 text-base text-black outline-none transition-colors duration-200 placeholder:text-brown data-focused:border-gold disabled:opacity-50",
+        " h-12 md:h-14 w-full rounded-xl border border-light-brown bg-white px-4 text-sm  text-black outline-none transition-colors duration-200 placeholder:text-brown placeholder:text-sm md:text-base data-focused:border-gold disabled:opacity-50",
         className,
       )}
     />
