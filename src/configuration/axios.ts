@@ -3,6 +3,8 @@ import { redirect } from "@tanstack/react-router";
 import { ENV } from "./env";
 import { getErrorMessage } from "@/shared/utils/error";
 import { toast } from "@/shared/utils/toast";
+import { createIsomorphicFn } from "@tanstack/react-start";
+import { getRequestHeader } from "@tanstack/react-start/server";
 
 const jsonHeaders = { "Content-Type": "application/json" };
 
@@ -19,15 +21,15 @@ export const privateApi = axios.create({
   headers: jsonHeaders,
 });
 
-//function to get cookie from request header for server side rendering
-privateApi.interceptors.request.use(async (config) => {
-  if (typeof window === "undefined") {
-    const { getRequestHeader } = await import("@tanstack/react-start/server");
-    const cookie = getRequestHeader("cookie");
+//function to get cookie header for server private api requests
+const getCookieHeader = createIsomorphicFn()
+  .server(() => getRequestHeader("cookie"))
+  .client(() => undefined);
 
-    if (cookie) {
-      config.headers.Cookie = cookie;
-    }
+privateApi.interceptors.request.use(async (config) => {
+  const cookie = getCookieHeader();
+  if (cookie) {
+    config.headers.Cookie = cookie;
   }
 
   return config;
