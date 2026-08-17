@@ -32,9 +32,9 @@ export const Route = createFileRoute("/auth/verify-email")({
 function RouteComponent() {
   const navigate = useNavigate();
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 md:gap-2 xl:gap-0 min-h-screen items-center">
+    <section className="grid grid-cols-1 md:grid-cols-2 md:gap-2 xl:gap-0 min-h-svh items-center md:h-svh md:overflow-hidden">
       <div
-        className="bg-cover hidden md:flex md:px-2 md:pb-25 xl:pl-25 items-end bg-center h-screen"
+        className="bg-cover hidden md:flex md:px-2 md:pb-25 xl:pl-25 items-end bg-center md:h-full"
         style={{ backgroundImage: `url(${emailVerificationBg})` }}
       >
         <CreateAccountBanner
